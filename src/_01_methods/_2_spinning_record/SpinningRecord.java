@@ -1,4 +1,4 @@
-``	package _01_methods._2_spinning_record;
+	package _01_methods._2_spinning_record;
 
 import game_tools.Sound;
 import processing.core.PApplet;
@@ -38,13 +38,16 @@ import processing.core.PImage;
 public class SpinningRecord extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
+	int rotate = 0;
     
     Song song = new Song("awesomeTrack.mp3");
     PImage pictureOfRecord;
     
+    
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
+        pictureOfRecord = loadImage("record.png");
     }
 
     @Override
@@ -54,7 +57,15 @@ public class SpinningRecord extends PApplet {
 
     @Override
     public void draw() {
-        
+    	pictureOfRecord.resize(HEIGHT,WIDTH);
+    
+        if(mousePressed) {
+        	 rotate+=10;
+        rotateImage(pictureOfRecord, rotate);
+       song.play();
+       //why does it not work?
+        }
+        image(pictureOfRecord, 0, 0);
     }
 
     static public void main(String[] args) {

@@ -70,14 +70,21 @@ public class RainGame extends PApplet {
 
     @Override
     public void draw() {
+    	background(255,255,255);
     	y = 10;
     	 Random ran = new Random();
-    	 x = ran.nextInt();
+ 
+    	 x = 10;
 fill(0,0,255);
 noStroke();
 for(int i = 0; i < 60; i++) {
+	if(i%2 == 0) {
+	background(255,255,255);
+	}
+
 ellipse(x,y,20,25);
 y= y+10;
+//x = ran.nextInt()*10;
 }
     }
 

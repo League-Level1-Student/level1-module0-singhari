@@ -10,16 +10,24 @@ public class ListOfGoals {
 	
 	public static void main(String[] args) {
 		//1. Call the appropriate method to make your list of goals
-		
+		createListOfGoals();
+	listOfGoals = getListOfGoals();
+	String list = "Your goals: "+listOfGoals;
+	JOptionPane.showMessageDialog(null,list);
 		//2. Call the appropriate method to get your list of goals, 
 		//   so you can use a pop-up to display them
-		
+		numberOfGoals = getNumberOfGoals();
+		String num = "You have "+numberOfGoals+" goals.";
+		JOptionPane.showMessageDialog(null,num);
 		//3. Call the appropriate method to get the number of goals you entered,
 		//   and using a pop-up display the number of goals
-		
+		boolean ManyNoMany = isManyGoals();
 		//4. Call the appropriate method to see if you put a lot of goals,
 		//   if you did put a lot of goals use a pop-up to say "Wow that's a lot of goals! Awesome!"
-		
+		if(ManyNoMany == true) {
+			String ans = "Wow that's a lot of goals! Awesome!";
+			JOptionPane.showMessageDialog(null, ans);
+		}
 	}
 	
 	static void createListOfGoals() {
