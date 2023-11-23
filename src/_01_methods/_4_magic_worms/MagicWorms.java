@@ -49,6 +49,7 @@ background(0,0,0);
     	int y = -x;
     	for(int i = 0; i< 200; i++) {
     		x = x+3;
+    		ellipse(x,y,20,20);
     	}
     }
 

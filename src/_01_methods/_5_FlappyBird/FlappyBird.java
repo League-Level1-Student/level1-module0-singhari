@@ -10,6 +10,7 @@ public class FlappyBird extends PApplet {
     public void settings() {
         size(WIDTH, HEIGHT);
         //where are the intstructions???????
+        //check the html :bruh:
     }
 
     @Override
