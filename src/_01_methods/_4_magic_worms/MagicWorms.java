@@ -49,11 +49,12 @@ background(0,0,0);
     public void draw() {
     	int x = ran.nextInt(WIDTH);
     	int y = ran.nextInt(HEIGHT);
+    	makeMagical();
     	for(int i = 0; i< 200; i++) {
-    		fill(200,50,50);
-    		ellipse(x,y,20,20);
+    		fill((x%255),i+55,(y%255));
     		x=ran.nextInt(WIDTH);
     		y = ran.nextInt(HEIGHT);
+    		ellipse(getWormX(x),getWormY(y),20,20);
     	}
     }
 
@@ -63,8 +64,8 @@ background(0,0,0);
     }
 
     /*********************** DO NOT MODIFY THE CODE BELOW ********************/
-    float frequency = 0.001f;
-    float noiseInterval = PI;
+    float frequency = 0.00000001f;
+    float noiseInterval = PI-1;
 
     void makeMagical() {
         fill(0, 0, 0, 10);
