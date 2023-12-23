@@ -44,7 +44,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(200, 300);
 
 		showNextImage();
 
@@ -62,16 +62,36 @@ int score;
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
 if(photoNumber ==4) {
-	
+	if(guess.toLowerCase().equals("jack")) {
+		
+	}
+	else {
+		
+	}
 }
 else if(photoNumber ==3) {
-	
-}
-else if(photoNumber ==2) {
-	
-}
+if(guess.toLowerCase().equals("morgan freeman")) {
+		
+	}
 else {
 	
+}
+}
+else if(photoNumber ==2) {
+if(guess.toLowerCase().equals("leonardo dicaprio")) {
+		
+	}
+else {
+	
+}
+}
+else {
+if(guess.toLowerCase().equals("arnold schwarzenegger")) {
+		
+	}
+else {
+	
+}
 }
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is

@@ -45,7 +45,7 @@ BOI.add(drumLabel);
         // Run your program. Do you see your drum image?
 BOI.pack();
         // Add this MouseListener to drumLabel
-
+drumLabel.add(mouseClicked(this));
         // *** Write the code in the mouseClicked() method below
 
         //  Set the layout of the panel to "new GridLayout()"

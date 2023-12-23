@@ -18,35 +18,39 @@ public class Fortune_Cookie implements ActionListener {
     JFrame frame = new JFrame();
     int rand = new Random().nextInt(5);
     String fortune;
+    
+    
+    
 	public void showButton() {
-		frame.setVisible(true);
-        System.out.println("Button clicked");
-        JButton button = new JButton();
-        frame.add(button);
-        frame.pack();
-        button.addActionListener(this);
+	frame.setVisible(true);
+    System.out.println("Button clicked");
+    JButton button = new JButton();
+    frame.add(button);
+    frame.pack();
+    button.addActionListener(this);
         if(rand ==5) {
-        	fortune = "";
+        	fortune = "You're a failure!";
         }
         else if(rand == 4) {
-        	fortune = "";
+        	fortune = "You will slip on a banana today.";
         }
         else if(rand == 3) {
-        	fortune = "";
+        	fortune = "Watch out for unsuspecting birds.";
         }
         else if(rand == 2) {
-        	fortune = "";
+        	fortune = "You're going to fail your test.";
         	
         }
         else {
-        	fortune = "";
+        	fortune = "Oops, someone deleted all your code on your latest project.";
         }
-        }
+     
+      }
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		JOptionPane.showMessageDialog(null, "Woohoo");
-		
+		JOptionPane.showMessageDialog(null, fortune);
+		rand = new Random().nextInt(5);
 	}
 }
