@@ -15,18 +15,16 @@ import javax.swing.JPanel;
 
 
 public class Fortune_Cookie implements ActionListener {
-    JFrame frame = new JFrame();
-    int rand = new Random().nextInt(5);;
     String fortune;
     
 	public void showButton() {
+	JFrame frame = new JFrame();
 	frame.setVisible(true);
-    System.out.println("Button clicked");
     JButton button = new JButton();
     frame.add(button);
     frame.pack();
+    int rand = new Random().nextInt(5);
     button.addActionListener(this);
-   
         if(rand ==1) {
         	fortune = "You're a failure!";
         }
@@ -38,17 +36,16 @@ public class Fortune_Cookie implements ActionListener {
         }
         else if(rand == 2) {
         	fortune = "You're going to fail your test.";
-        	
         }
         else {
         	fortune = "Oops, someone deleted all your code on your latest project.";
         }
-     
       }
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		JOptionPane.showMessageDialog(null, fortune);
-		rand = new Random().nextInt(5);
+	    System.out.println("Button clicked");
+	    showButton();
 	}
 }
