@@ -30,6 +30,7 @@ public class BodyPartQuiz {
 	JPanel panel = new JPanel();
 
 	int photoNumber = 4;
+	int score = 0; 
 	
 	public void run() {
 		initializeGui();
@@ -51,54 +52,56 @@ public class BodyPartQuiz {
 	}
 
 	private void startQuiz() {
-
+		if(photoNumber<1) {
+			JOptionPane.showMessageDialog(null,score);
+		}
 		// 1. Make an int variable to hold the score.
-int score; 
+		
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String guess = JOptionPane.showInputDialog("Who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-if(photoNumber ==4) {
-	if(guess.toLowerCase().equals("jack")) {
-		
-	}
-	else {
-		
-	}
-}
-else if(photoNumber ==3) {
-if(guess.toLowerCase().equals("morgan freeman")) {
-		
-	}
-else {
-	
-}
-}
-else if(photoNumber ==2) {
-if(guess.toLowerCase().equals("leonardo dicaprio")) {
-		
-	}
-else {
-	
-}
-}
-else {
-if(guess.toLowerCase().equals("arnold schwarzenegger")) {
-		
-	}
-else {
-	
-}
-}
+		if(photoNumber ==4) {
+			if(guess.toLowerCase().equals("jack")) {
+		score++;
+			}
+			else {
+		JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+		}
+		else if(photoNumber ==3) {
+			if(guess.toLowerCase().equals("morgan freeman")) {
+				score++;
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+		}
+		else if(photoNumber ==2) {
+			if(guess.toLowerCase().equals("leonardo dicaprio")) {
+				score++;
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+		}
+		else {
+			if(guess.toLowerCase().equals("arnold schwarzenegger")) {
+				score++;
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Incorrect");
+			}
+		}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+photoNumber--;
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score

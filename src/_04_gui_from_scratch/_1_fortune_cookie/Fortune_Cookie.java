@@ -16,10 +16,8 @@ import javax.swing.JPanel;
 
 public class Fortune_Cookie implements ActionListener {
     JFrame frame = new JFrame();
-    int rand = new Random().nextInt(5);
+    int rand = new Random().nextInt(5);;
     String fortune;
-    
-    
     
 	public void showButton() {
 	frame.setVisible(true);
@@ -28,7 +26,8 @@ public class Fortune_Cookie implements ActionListener {
     frame.add(button);
     frame.pack();
     button.addActionListener(this);
-        if(rand ==5) {
+   
+        if(rand ==1) {
         	fortune = "You're a failure!";
         }
         else if(rand == 4) {
@@ -49,7 +48,6 @@ public class Fortune_Cookie implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		JOptionPane.showMessageDialog(null, fortune);
 		rand = new Random().nextInt(5);
 	}
